@@ -1,0 +1,30 @@
+body {
+  @include font-body();
+}
+h1, h2, h3, h4, h5, h6 {
+  @include font-header();
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1rem;
+}
+a {
+  color: #000;
+  display: inline-block;
+  &:after {
+    content: '';
+    height: 2px;
+    background-color: transparent;
+    display: block;
+    transition: background-color, ease, 200ms;
+  }
+  &:hover {
+    color: #000;
+    text-decoration: none;
+    &:after {
+      background-color: #000;
+    }
+  }
+}
