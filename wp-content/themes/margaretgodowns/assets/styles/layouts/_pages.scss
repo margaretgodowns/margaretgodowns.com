@@ -1,18 +1,35 @@
 .intro {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   .contact-info {
     width: 30%;
+    @media screen and (max-width: 800px) {
+      width: 50%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
   .image {
     width: 40%;
     margin-top: 12em;
+    @media screen and (max-width: 800px) {
+      margin-top: 6em;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      align-self: flex-end;
+    }
   }
 }
 .featured-work-title {
   margin-top: 12rem;
   width: 100%;
   text-align: right;
+  @media screen and (max-width: 800px) {
+    margin-top: 6em;
+  }
   h3 {
     display: inline-block;
   }
@@ -20,9 +37,20 @@
 .featured-posts {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
   .flex-item {
     width: 30%;
     margin-top: 6rem;
+    @media screen and (max-width: 800px) {
+      width: 55%;
+      margin-top: 3rem;
+    }
+    @media screen and (max-width: 600px) {
+      width: 75%;
+    }
   }
   .flex-item:nth-of-type(2) {
     align-self: flex-end;
@@ -30,6 +58,11 @@
 
   .flex-item:first-of-type() {
     align-self: center;
+    position: relative;
+    top: -6rem;
+    @media screen and (max-width: 800px) {
+      top: auto;
+    }
   }
 }
 .flex-item h4 {
@@ -43,7 +76,7 @@
   margin-bottom: 25px;
   transition: background-color, ease, 200ms;
 }
-.flex-item:hover {
+.featured-posts .flex-item:hover {
   a:after {
     background-color: transparent;
   }
@@ -51,4 +84,60 @@
     background-color: #000;
     transform: translateX(25px);
   }
+}
+.catalogue-title {
+  margin-top: 12rem;
+  @media screen and (max-width: 800px) {
+    margin-top: 6em;
+  }
+}
+.catalogue {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  .flex-item {
+    width: 40%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      text-align: right;
+      margin-top: 3rem;
+    }
+  }
+  .flex-item:nth-of-type(2) {
+    @media screen and (max-width: 600px) {
+      text-align: left;
+    }
+  }
+  a {
+    padding: 1em 0 0 0;
+    @media screen and (max-width: 800px) {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    line-height: .5;
+    @media screen and (max-width: 800px) {
+      line-height: 1;
+    }
+  }
+  a:after {
+    content: '';
+    height: 1px;
+    background-color: #000;
+    display: block;
+    @media screen and (max-width: 800px) {
+      background-color: transparent;
+    }
+  }
+  a:hover {
+    &:after {
+      background-color: transparent;
+    }
+  }
+}
+.ecommerce {
+  position: relative;
+  bottom: -3rem;
 }

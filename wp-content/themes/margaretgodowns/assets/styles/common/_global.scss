@@ -49,6 +49,14 @@ img {
   position: relative;
   left: -50px;
   margin-bottom: 25px;
+  @media screen and (max-width: 800px) {
+    width: 100px;
+    left: -25px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 75px;
+    left: -10px;
+  }
 }
 .line-center:before {
   content: '';
@@ -59,6 +67,9 @@ img {
   position: relative;
   left: 25%;
   margin-bottom: 50px;
+  @media screen and (max-width: 800px) {
+    width: 100px;
+  }
 }
 .line-right:before {
   content: '';
@@ -69,4 +80,37 @@ img {
   position: relative;
   right: -100px;
   margin-bottom: 25px;
+  @media screen and (max-width: 800px) {
+    width: 100px;
+    right: -125px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 75px;
+  }
+}
+
+.footer {
+  margin-top: 12rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 600px) {
+    margin-top: 6rem;
+  }
+  ul {
+    padding: 0;
+  }
+  ul li {
+    display: inline;
+    padding: 0 1em 0 0;
+    @media screen and (max-width: 880px) {
+      padding: 1em;
+    }
+  }
+  .flex-item {
+    @media screen and (max-width: 880px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
 }
